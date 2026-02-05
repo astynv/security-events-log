@@ -1,0 +1,28 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.layout {
+  min-height: 100vh;
+}
+
+.header {
+  background: $primary-color;
+  padding: 0 $spacing-lg;
+  @include flex-between;
+
+  .title {
+    color: $white;
+    margin: $spacing-md 0;
+    font-size: $font-size-xxl;
+    font-weight: 600;
+  }
+}
+
+.content {
+  padding: $spacing-lg;
+  background: $bg-color;
+
+  @include mobile {
+    padding: $spacing-md;
+  }
+}

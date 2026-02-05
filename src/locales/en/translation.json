@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "Security Events Log"
+  },
+  "events": {
+    "table": {
+      "columns": {
+        "id": "ID",
+        "timestamp": "Date/Time",
+        "type": "Type",
+        "severity": "Severity",
+        "user": "User",
+        "workstation": "Workstation"
+      },
+      "pagination": {
+        "total": "Total: {{count}} events"
+      },
+      "empty": {
+        "noEvents": "No events found",
+        "noMatches": "No events match your filters"
+      }
+    },
+    "error": {
+      "title": "Error",
+      "description": "Failed to load events. Please try again later."
+    },
+    "filter": {
+      "severity": "Severity",
+      "searchUser": "Search user",
+      "reset": "Reset"
+    },
+    "drawer": {
+      "title": "Event Details",
+      "labels": {
+        "ip": "IP Address",
+        "location": "Location",
+        "sessionId": "Session ID",
+        "userAgent": "User Agent",
+        "details": "Details"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  }
+}

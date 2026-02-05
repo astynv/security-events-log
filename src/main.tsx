@@ -1,0 +1,29 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { QueryProvider } from './providers/QueryProvider'
+import App from './app/index.tsx'
+
+async function startApp() {
+  if (import.meta.env.DEV) {
+    const { worker } = await import('./mocks/browser')
+    await worker.start({
+      onUnhandledRequest: 'bypass',
+    })
+  }
+
+  const root = document.getElementById('root')
+
+  if (!root) {
+    throw new Error('Root element not found')
+  }
+
+  createRoot(root).render(
+    <StrictMode>
+      <QueryProvider>
+        <App />
+      </QueryProvider>
+    </StrictMode>
+  )
+}
+
+startApp()
